@@ -1,7 +1,5 @@
-import { PropsWithChildren, ReactElement, ReactNode, useState } from 'react'
-import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
-import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
-
+import { ReactElement, ReactNode, memo } from 'react'
+import { Dialog, DialogBackdrop } from '@headlessui/react'
 interface DialogCommonProps {
     open: boolean,
     onClose: () => void,
@@ -20,4 +18,4 @@ const DialogCommon: React.FC<DialogCommonProps> = ({ open, onClose, children }):
     )
 }
 
-export default DialogCommon;
+export default memo(DialogCommon);
