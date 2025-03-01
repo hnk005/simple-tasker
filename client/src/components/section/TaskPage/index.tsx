@@ -1,7 +1,10 @@
-import TaskProvider from "@/providers/TaskProvider"
-import TaskList from "./TaskList"
+import { useContext, useState } from "react";
+import TaskProvider from "@/providers/TaskProvider";
+import TaskList from "./TaskList";
 import TaskFilter from "./TaskFilter";
 import TaskSearch from "./TaskSearch";
+import EditTaskDialog from "./EditTaskDialog";
+import DeleteTaskDialog from "./DeleteTaskDialog";
 
 const TaskPage = () => {
     return (
@@ -15,9 +18,11 @@ const TaskPage = () => {
                     </div>
                 </div>
                 <TaskList />
+                <EditTaskDialog />
+                <DeleteTaskDialog />
             </TaskProvider>
         </div>
-    )
-}
+    );
+};
 
 export default TaskPage;

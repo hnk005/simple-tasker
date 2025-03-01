@@ -5,7 +5,7 @@ import { ReactElement, useContext } from "react";
 
 const Task = ({ task }: { task: TaskInterface }): ReactElement => {
     const { id, title, description, dueDate, status, priority } = task;
-    const { handleEdit, handleDelete, handleComplete } = useContext(TaskContext);
+    const { openEdit, openDelete, handleComplete } = useContext(TaskContext);
 
     const getPriorityColor = (priority: PriorityTask) => {
         switch (priority) {
@@ -47,7 +47,7 @@ const Task = ({ task }: { task: TaskInterface }): ReactElement => {
             <div className="flex flex-wrap justify-end mt-3 gap-2">
                 {status !== "Complete" && (
                     <button
-                        onClick={() => handleEdit(id)}
+                        onClick={() => openEdit(id)}
                         className="bg-blue-100 text-blue-600 px-2 md:px-3 py-1 rounded flex items-center text-xs md:text-sm"
                     >
                         <svg className="h-4 w-4 md:h-5 md:w-5 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -57,7 +57,7 @@ const Task = ({ task }: { task: TaskInterface }): ReactElement => {
                     </button>
                 )}
                 <button
-                    onClick={() => handleDelete(id)}
+                    onClick={() => openDelete(id)}
                     className="bg-red-100 text-red-600 px-2 md:px-3 py-1 rounded flex items-center text-xs md:text-sm"
                 >
                     <svg className="h-4 w-4 md:h-5 md:w-5 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
