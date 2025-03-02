@@ -106,33 +106,9 @@ npm run dev
 | PUT         | /api/tasks/\:id | Cập nhật công việc      |
 | DELETE      | /api/tasks/\:id | Xoá công việc           |
 
-## Cấu trúc thư mục
-
-```
-project-root
-│
-├─ backend
-│   ├─ controllers
-│   ├─ models
-│   ├─ routes
-│   ├─ middleware
-│   └─ server.js
-│
-└─ frontend
-    ├─ src
-    │   ├─ components
-    │   ├─ pages
-    │   ├─ hooks
-    │   └─ App.jsx
-    └─ index.css
-```
-
 ## Môi trường
 
 - Node.js: 18.x
 - MongoDB: 6.x
 - React: 18.x
 - TailwindCSS: 3.x
-
-
-
